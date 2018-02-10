@@ -10,20 +10,20 @@ public class ExampleUnitTest {
     public void check0() throws Exception {
         Validator check = new Validator();
 
-        assertEquals(0, check.validate(""));//none character
+        assertEquals(0, check.validate(""));
     }
 
     @Test
     public void check1() {
         Validator check = new Validator();
         assertEquals(1, check.validate("password"));
-        assertEquals(1, check.validate("qwertyu"));
+        assertEquals(1, check.validate("abcdefg"));
     }
 
     @Test
     public void check2() {
         Validator check = new Validator();
         assertEquals(2, check.validate("Password"));
-        assertEquals(2, check.validate("qwertyui"));
+        assertEquals(2, check.validate("abcdefg"));
     }
 }
