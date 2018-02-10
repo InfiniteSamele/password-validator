@@ -13,7 +13,7 @@ public class Validator {
         if (!p.equals("password")) {
             Strength++;
         }
-        if (p.length() >= 8) {
+        if (p.length() >= 7) {
             Strength++;
         } // length of 8
         return Strength;
