@@ -5,8 +5,8 @@ package com.example.diwu.a2;
  */
 
 public class Validator {
-    public int validate(String p){
-        if (p.length() ==0) {
+    public int validate(String p) {
+        if (p.length() == 0) {
             return 0;
         }
         int Strength = 0;
@@ -16,6 +16,15 @@ public class Validator {
         if (p.length() >= 8) {
             Strength++;
         } // length of 8
+        if (!p.toLowerCase().equals(p)) {
+            Strength++;
+        }// lower and upper case
+        if (p.matches("(.*)[0-9]+(.*)")) {
+            Strength++;
+        }//check number exist
+        if (p.matches("(.*)[^0-9a-zA-Z]+(.*)")) {
+            Strength++;
+        }
         return Strength;
     }
 }
